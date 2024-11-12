@@ -10,10 +10,10 @@ function Home() {
       <div className="bg-dark-10 flex justify-center py-10">
         <div className="container grid grid-cols-1 gap-8 text-dark-60">
           {/* Carrossel */}
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <DefaultCarousel data={CarouselData} />
-          </div>
-          
+          </div> */}
+
           {/* Logo */}
           <div className="flex justify-center">
             <img src={logoReact} className="w-2/3" alt="React logo" />
