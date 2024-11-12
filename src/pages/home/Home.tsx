@@ -1,3 +1,4 @@
+import { Sidebar } from '@phosphor-icons/react/dist/ssr/Sidebar';
 import logoReact from '../../assets/react.svg';
 // import DefaultCarousel from '../../components/carousels/DefaultCarousel';
 // import { CarouselData } from '../../utils/CarouselData';
@@ -12,7 +13,6 @@ function Home() {
           {/* <div className="flex justify-center">
             <DefaultCarousel data={CarouselData} />
           </div> */}
-
           {/* Logo */}
           <div className="flex justify-center">
             <img src={logoReact} className="w-2/3" alt="React logo" />
