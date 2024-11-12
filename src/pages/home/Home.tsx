@@ -1,7 +1,6 @@
-// src/pages/Home.tsx
 import logoReact from '../../assets/react.svg';
-import DefaultCarousel from '../../components/carousels/DefaultCarousel';
-import { CarouselData } from '../../utils/CarouselData';
+// import DefaultCarousel from '../../components/carousels/DefaultCarousel';
+// import { CarouselData } from '../../utils/CarouselData';
 import './Home.css';
 
 function Home() {

@@ -1,4 +1,3 @@
-// src/utils/CarouselData.ts
 export const CarouselData = [
   {
     id: '1',
