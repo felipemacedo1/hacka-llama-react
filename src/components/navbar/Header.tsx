@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Trophy } from '@phosphor-icons/react';
 
-function SubNavBar() {
+function Header() {
   return (
     <div className='w-full bg-blue-900/20 text-dark-60/100 flex justify-center py-4'>
       <div className="container flex justify-between text-lg">
@@ -33,4 +33,4 @@ function SubNavBar() {
   );
 }
 
-export default SubNavBar;
+export default Header;

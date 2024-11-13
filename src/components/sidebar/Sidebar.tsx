@@ -8,17 +8,16 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
   return (
-    <aside className="fixed top-0 right-0 h-full w-64 bg-gray-800 text-white p-6 space-y-6 transform transition-transform">
+    <aside className="fixed top-0 right-0 h-full w-64 bg-gray-800 text-white p-6 space-y-6 transform transition-all duration-900 ease-in-out">
       {/* Ícone de Fechar */}
-     <button
-      onClick={closeSidebar}
-      className="flex justify-center items-center w-full bg-gray-700 p-2 rounded-md"
-    >   
-    <span className=' rounded-lg'>
-      <X size={31} weight="bold" />
-    </span>
+      <button
+        onClick={closeSidebar}
+        className="flex justify-center items-center w-full bg-gray-700 p-2 rounded-md"
+      >
+        <span className='rounded-lg'>
+          <X size={31} weight="bold" />
+        </span>
       </button>
-      
 
       <div className="text-center">
         <h2 className="text-2xl font-bold mb-2">Explora+</h2>
