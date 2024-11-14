@@ -17,8 +17,6 @@ function Home() {
           <div className="flex justify-center">
             <img src={logoReact} className="w-2/3" alt="React logo" />
           </div>
-
-
           {/* Outros conteúdos da home (se necessário) */}
           <div className="flex flex-col gap-4 items-center justify-center py-4">
             <h2 className="text-5xl font-bold">Seja bem-vinde!</h2>

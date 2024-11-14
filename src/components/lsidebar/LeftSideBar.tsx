@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QuestionForm = () => {
+const LeftSideBar = () => {
   return (
     <div className="p-4">
       {/* Imagem de perfil */}
@@ -58,4 +58,4 @@ const QuestionForm = () => {
   );
 };
 
-export default QuestionForm;
+export default LeftSideBar;

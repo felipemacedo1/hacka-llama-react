@@ -50,7 +50,7 @@ function NavBar() {
           <div className='hidden lg:flex gap-4 cursor-pointer items-end'>
             <Link to='/home' className='hover:underline font-bold px-3 rounded-lg'>Disciplinas</Link>
             <Link to='/home' className='hover:underline font-bold px-3 rounded-lg'>Notas e Feedbacks</Link>
-            <Link to='/categorias' className='hover:underline font-bold px-3 rounded-lg'>Dashboard</Link>
+            <Link to='/dashboard' className='hover:underline font-bold px-3 rounded-lg'>Dashboard</Link>
             <Link to='/cadastrarCategoria' className='hover:underline font-bold px-3 rounded-lg'>Apoio Socioemocional</Link>
           </div>
 
