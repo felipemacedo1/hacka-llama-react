@@ -43,15 +43,15 @@ function NavBar() {
   return (
     <>
       <div className='w-full bg-custom-dark text-dark-60/100 flex justify-center py-4'>
-        <div className="container flex justify-between items-center text-lg">
-          <Link to='/home' className='text-2xl font-bold '>Explora+</Link>
+        <div className="container px-4 flex justify-between items-center text-lg">
+          <Link to='/home' className='text-[24px] font-bold '>Explora+</Link>
 
           {/* Links de Navegação */}
           <div className='hidden lg:flex gap-4 cursor-pointer items-end'>
-            <Link to='/home' className='hover:underline font-bold px-3 rounded-lg'>Disciplinas</Link>
-            <Link to='/home' className='hover:underline font-bold px-3 rounded-lg'>Notas e Feedbacks</Link>
-            <Link to='/dashboard' className='hover:underline font-bold px-3 rounded-lg'>Dashboard</Link>
-            <Link to='/cadastrarCategoria' className='hover:underline font-bold px-3 rounded-lg'>Apoio Socioemocional</Link>
+            <Link to='/home' className='hover:underline text-[14px] font-bold px-3 rounded-lg'>Disciplinas</Link>
+            <Link to='/home' className='hover:underline text-[14px] font-bold px-3 rounded-lg'>Notas e Feedbacks</Link>
+            <Link to='/dashboard' className='hover:underline text-[14px] font-bold px-3 rounded-lg'>Dashboard</Link>
+            <Link to='/cadastrarCategoria' className='hover:underline text-[14px] font-bold px-3 rounded-lg'>Apoio Socioemocional</Link>
           </div>
 
           {/* Ícones de Notificações e Perfil */}

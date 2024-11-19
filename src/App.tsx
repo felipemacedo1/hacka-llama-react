@@ -7,15 +7,17 @@ import ListaCategorias from './components/categorias/listaCategorias/ListaCatego
 import FormularioCategoria from './components/categorias/formularioCategoria/FormularioCategoria'
 import DeletarCategoria from './components/categorias/deletarCategorias/DeletarCategoria'
 import Dashboard from './pages/dashboard/Dashboard';
+import Login from './pages/login/Login';
 
 function App() {
   return (
     <>
        <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="min-h-[80vh] bg-dark-60">
         <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/categorias" element={<ListaCategorias />} />
@@ -25,7 +27,6 @@ function App() {
         <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
         </Routes>
       </div>
-
       <Footer />
       </BrowserRouter>
     </>
