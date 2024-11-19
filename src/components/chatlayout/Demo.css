@@ -1,0 +1,14 @@
+.gradientLlama {
+    background: rgba(0, 0, 0, 0.68);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.68) 7%, rgba(0, 0, 0, 0.68) 20%, rgba(0, 0, 0, 0.68) 71%);
+    opacity: 0.9;
+  }
+
+  /* demo.css */
+.chat-demo {
+  background-color: #1a202c; /* Exemplo de cor de fundo */
+}
+
+.chat-demo .message {
+  border-radius: 8px;
+}

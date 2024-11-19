@@ -31,7 +31,7 @@ const Footer: React.FC = () => (
       {/* Quarta coluna com as imagens */}
       <div className="flex flex-col pt-2 space-y-2">
         <a href="#" className="hover:underline text-dark-60 uppercase">HACKATHON HOSTED</a>
-        <div className='flex  flex-row space-x-2'>
+        <div className='flex flex-row space-x-2'>
         <div className="">
           <img src="https://imgur.com/hCCW2il.png" alt="Imagem 1" 
           className="max-w-[25px] " />

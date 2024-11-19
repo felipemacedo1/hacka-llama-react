@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 // import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
 import logoexplora from '../../imgs/logoexplora.png';
+import ChatDemo from '../../components/chatlayout/ChatDemo';
 
 
 
@@ -47,7 +48,7 @@ function Login() {
          /* onSubmit={login} */style={{marginTop:'-80px'}}>
             <div className='w-full flex justify-end'>
                 <span className='rounded-lg p-1'>
-                    <img src={logoexplora} className='w-24 flex-end'
+                    <img src={logoexplora} className='w-20 flex-end' style={{marginBottom:'-40px'}}
                     alt="" />
                 </span>
             </div>
@@ -59,7 +60,7 @@ function Login() {
               id="usuario"
               name="usuario"
               placeholder="Digite seu email"
-              className="border-2 rounded p-1"
+              className="border-2 text-[12px] rounded p-1"
             //   value={usuarioLogin.usuario} 
             //   onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -71,7 +72,7 @@ function Login() {
               id="senha"
               name="senha"
               placeholder="Digite sua Senha"
-              className="border-2 rounded p-1"
+              className="border-2 text-[12px] rounded p-1"
             //   value={usuarioLogin.senha} 
             //   onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -110,7 +111,9 @@ function Login() {
             </Link>
           </p>
         </form>
-        <div className="hidden lg:block"></div>
+        <div className="flex  place-items-center" style={{marginTop:'-80px'}}>
+        <ChatDemo />
+        </div>
       </div>
     </>
   );
