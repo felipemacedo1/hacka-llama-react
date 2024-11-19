@@ -14,7 +14,7 @@ module.exports = {
         'dark-40': '#252529',
         'dark-50': '#AFABB6',
         'dark-60': '#FFFFFF',
-        'custom-dark': '#01080E',
+        'custom-dark': 'rgba(1, 8, 14, 1)',
       },
     },
   },

@@ -1,4 +1,4 @@
-import { X } from '@phosphor-icons/react';  // Importando o ícone de fechar
+import { CaretDoubleRight, CaretRight, X } from '@phosphor-icons/react';  // Importando o ícone de fechar
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,25 +10,24 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
   return (
     <aside className="fixed top-0 right-0 h-full w-64 bg-gray-800 text-white p-6 space-y-6 transform transition-all duration-900 ease-in-out">
       {/* Ícone de Fechar */}
-      <div className='fixed top-0 left-0'>
-      <button
-        onClick={closeSidebar}
-        className="flex justify-center items-center w-[32px] h-[32px] bg-gray-700 p-2 rounded-lg"
-      >
-        <span className='rounded-lg'>
-          <X size={22} weight="bold" />
-        </span>
-      </button>
-        
+      <div className='flex'>
+        <div className='fixed top-0 left-0'>
+          <button
+            onClick={closeSidebar}
+            className="flex justify-center items-center w-[32px] h-[32px] bg-gray-700 p-2 rounded-lg"
+          >
+            <span className=''>
+            <CaretDoubleRight size={22} weight="regular" />
+            </span>
+          </button>
+        </div>
       </div>
-
-      <div className="text-center">
-        <h2 className="text-md font-bold ">Explora+</h2>
-        <p className="text-[14px]">Bem-vindo de volta!</p>
-      </div>
-
+        <div className="text-center">
+          <h2 className="text-md font-bold ">Explora+</h2>
+          {/* <p className="text-[14px]">Bem-vindo de volta!</p> */}
+        </div>
       {/* Navegação Principal */}
-      <nav className="space-y-0">
+      <nav className="space-y-1">
         <Link to="/" className="block text-sm hover:bg-gray-700 p-2 rounded-md">
           Dashboard
         </Link>
@@ -51,18 +50,16 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
           Comunidade
         </Link>
       </nav>
-
-      {/* Perfil do Usuário */}
-      <div className="mt-8 p-4 bg-gray-700 rounded-lg">
+       {/* Perfil do Usuário */}
+       <div className="p-4 bg-gray-700 rounded-lg" style={{marginTop:'10px'}}>
         <p className="text-sm">Perfil</p>
         <p className="text-sm font-semibold">Nome do Usuário</p>
         <button className="mt-2 bg-yellow-500 text-white px-4 py-2 rounded-md w-full">
           Editar Perfil
         </button>
       </div>
-
       {/* Logout */}
-      <div className="mt-6">
+      <div className="" style={{marginTop:'10px'}}>
         <button className="w-full text-red-500 hover:bg-gray-700 p-2 rounded-md">
           Sair
         </button>

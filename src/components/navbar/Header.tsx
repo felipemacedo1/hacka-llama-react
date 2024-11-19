@@ -3,7 +3,7 @@ import { Trophy } from '@phosphor-icons/react';
 
 function Header() {
   return (
-    <div className='w-full px-10 bg-blue-900/20 text-dark-60/100 flex py-2'>
+    <div className='w-full px-10 text-dark-60/100 flex py-2' style={{ backgroundColor: 'rgba(3, 30, 42, 1)' }}>
       <div className="container mx-10 flex justify-between items-center text-[24px] justify-between flex mx-4">
         <Link to='/home' className='text-[22px] font-bold'>Dashboard</Link>
         
