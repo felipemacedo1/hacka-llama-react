@@ -12,22 +12,23 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
       {/* Ícone de Fechar */}
       <div className='flex'>
         <div className='fixed top-0 left-0'>
-          <button
-            onClick={closeSidebar}
-            className="flex justify-center items-center w-[32px] h-[32px] bg-gray-700 p-2 rounded-lg"
-          >
+        <button
+          onClick={closeSidebar}
+          className="flex justify-center items-center w-[32px] h-[32px] bg-gray-700 p-2"
+          style={{ borderTopRightRadius: '0px', borderBottomRightRadius: '8px' }}
+        >
             <span className=''>
             <CaretDoubleRight size={22} weight="regular" />
             </span>
           </button>
         </div>
       </div>
-        <div className="text-center">
-          <h2 className="text-md font-bold ">Explora+</h2>
+        <div className="text-center" style={{ marginTop: '15px' }}>
+          <h2 className="text-md font-bold">Explora+</h2>
           {/* <p className="text-[14px]">Bem-vindo de volta!</p> */}
         </div>
       {/* Navegação Principal */}
-      <nav className="space-y-1">
+      <nav className="space-y-1" style={{ marginTop: '15px' }}>
         <Link to="/" className="block text-sm hover:bg-gray-700 p-2 rounded-md">
           Dashboard
         </Link>
