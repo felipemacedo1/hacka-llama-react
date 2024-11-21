@@ -31,12 +31,12 @@ const LeftSideBar = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md w-[300px] max-w-sm mx-auto">
+    <div className="px-6 bg-white rounded-lg shadow-md w-[300px] max-w-sm mx-auto">
       {/* Imagem de perfil */}
       <img
-        src="https://i.imgur.com/dQP9Zmd.gif"
+        src="https://i.imgur.com/lCq8fMu.gif"
         alt="Profile picture of a llama"
-        className="rounded-full mx-auto mb-6 w-24 h-24 object-cover shadow-md"
+        className="mx-auto mb-5 w-50 h-50 object-cover rounded-[50px]" style={{ marginTop: '-90px' }}
       />
 
       {/* Nível de conhecimento */}
@@ -45,7 +45,7 @@ const LeftSideBar = () => {
           NÍVEL DE CONHECIMENTO
         </label>
         <div
-          className="bg-gray-100 text-gray-800 rounded-full px-4 py-2 flex items-center justify-between cursor-pointer"
+          className="bg-gray-100 h-9 text-gray-800 rounded-full px-4 py-2 flex items-center justify-between cursor-pointer"
           onClick={toggleKnowledgeLevelDropdown}
         >
           {selectedKnowledgeLevel}
@@ -79,7 +79,7 @@ const LeftSideBar = () => {
           ÁREA DE INTERESSE
         </label>
         <div
-          className="bg-gray-100 text-gray-800 rounded-full px-4 py-2 flex items-center justify-between cursor-pointer"
+          className="bg-gray-100 h-9 text-gray-800 rounded-full px-4 py-2 flex items-center justify-between cursor-pointer"
           onClick={toggleInterestAreaDropdown}
         >
           {selectedInterestArea}
@@ -112,7 +112,7 @@ const LeftSideBar = () => {
         <label className="block text-[12px] font-semibold text-gray-600 mb-2">
           QTDE DE QUESTÕES
         </label>
-        <div className="flex items-center space-x-1">
+        <div className="flex h-9 items-center space-x-1">
           <button
             className="bg-gray-200 text-gray-700 rounded-full p-2 hover:bg-gray-300"
             onClick={() => adjustQuestionCount(-1)}
@@ -125,10 +125,10 @@ const LeftSideBar = () => {
             type="text"
             value={questionCount}
             onChange={(e) => setQuestionCount(Math.max(1, Number(e.target.value)))}
-            className="bg-gray-100 text-gray-800 rounded-full px-4 py-2 w-full text-center"
+            className="bg-gray-100 h-9 text-gray-800 rounded-full px-4 py-2 w-full text-center"
           />
           <button
-            className="bg-gray-200 text-gray-700 rounded-full p-2 hover:bg-gray-300"
+            className="bg-gray-200  text-gray-700 rounded-full p-2 hover:bg-gray-300"
             onClick={() => adjustQuestionCount(1)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

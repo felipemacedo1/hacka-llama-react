@@ -4,8 +4,8 @@ const PageContent: React.FC = () => {
   return (
     <div className="flex-1 p-6 bg-gray-50">
       {/* Título */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">Ciência e Tecnologia &gt; INEP</h1>
+      <div className="mb-4">
+        <h1 className="text-[14px] font-bold text-gray-800/30">Ciência e Tecnologia &gt; INEP</h1>
       </div>
 
       {/* Conteúdo Principal */}
