@@ -22,9 +22,9 @@ const LeftSideBar = () => {
       <img
         src="https://i.imgur.com/lCq8fMu.gif"
         alt="Profile picture of a llama"
-        className="mx-auto mb-5 w-24 h-24 object-cover rounded-full"
+        className="mx-auto mb-5 w-24 h-24 object-cover"
       />
-
+        
       {/* Nível de Conhecimento */}
       <Dropdown
         label="NÍVEL DE CONHECIMENTO"
@@ -53,28 +53,34 @@ const LeftSideBar = () => {
 
       {/* Quantidade de Questões */}
       <div className="mb-4">
-        <label className="block text-sm font-semibold text-gray-600 mb-2">QTDE DE QUESTÕES</label>
-        <div className="flex items-center space-x-2">
-          <button
-            className="bg-gray-200 text-gray-700 rounded-full p-2 hover:bg-gray-300"
-            onClick={() => adjustQuestionCount(-1)}
-          >
-            -
-          </button>
-          <input
-            type="text"
-            value={questionCount}
-            onChange={(e) => setQuestionCount(Math.max(1, Number(e.target.value)))}
-            className="bg-gray-100 text-gray-800 rounded-full px-4 py-1 w-full text-center"
-          />
-          <button
-            className="bg-gray-200 text-gray-700 rounded-full p-2 hover:bg-gray-300"
-            onClick={() => adjustQuestionCount(1)}
-          >
-            +
-          </button>
-        </div>
-      </div>
+  <label className="block text-sm font-semibold text-gray-600 mb-2">QTDE DE QUESTÕES</label>
+  <div className="relative flex items-center justify-center">
+    {/* Botão '-' */}
+    <button
+      className="absolute left-0 bg-gray-200 text-gray-700 rounded-l-full px-3 h-full flex items-center justify-center hover:bg-gray-300"
+      onClick={() => adjustQuestionCount(-1)}
+    >
+      -
+    </button>
+
+    {/* Campo de entrada */}
+    <input
+      type="text"
+      value={questionCount}
+      onChange={(e) => setQuestionCount(Math.max(1, Number(e.target.value)))}
+      className="bg-gray-100 text-gray-800 rounded-full text-center px-12 py-2 w-full"
+    />
+
+    {/* Botão '+' */}
+    <button
+      className="absolute right-0 bg-gray-200 text-gray-700 rounded-r-full px-3 h-full flex items-center justify-center hover:bg-gray-300"
+      onClick={() => adjustQuestionCount(1)}
+    >
+      +
+    </button>
+  </div>
+</div>
+
 
       {/* Instituição */}
       <Dropdown
