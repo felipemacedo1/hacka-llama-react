@@ -4,8 +4,10 @@ import StatisticsDashboard from "../../components/dashboards/StatisticsDashboard
 import LineChartDashboard from "../../components/dashboards/LineChartDashboard";
 import BarChartDashboard from "../../components/dashboards/BarChartDashboard";
 import PieChartDashboard from "../../components/dashboards/PieChartDashboard";
+import { useAuth } from "../../contexts/AuthContext";
 
 const Dashboard: React.FC = () => {
+  const { usuario } = useAuth();
   const statistics = [
     { title: "Nível de progresso", value: 8536, percentual: 2, bgColor: "bg-blue-100" },
     { title: "Presenças", value: 156, percentual: -1, bgColor: "bg-yellow-100" },
