@@ -1,72 +1,130 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Explora+ (Hacka-Llama React)
 
-## Available Scripts
+Explora+ is a React-based application developed during the Hacka-Llama hackathon. It integrates Firebase for authentication and utilizes various React libraries to deliver a seamless, interactive user experience.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Authentication**: Google login using Firebase.
+- **Interactive Charts**: Built using Chart.js and React Chart.js 2.
+- **Responsive Design**: Developed with TailwindCSS and Material-UI.
+- **Dashboard**: Visualize data dynamically using Recharts.
+- **API Integration**: Axios-based REST API integration.
+- **Routing**: Client-side navigation with React Router DOM.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/felipemacedo1/hacka-llama-react.git
+   cd hacka-llama-react
+   ```
 
-### `npm run build`
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Set up environment variables:
+   Create a `.env` file in the root directory with the following variables:
+   ```env
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+   VITE_FIREBASE_APP_ID=your_firebase_app_id
+   VITE_FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+### Development Server
+Run the application locally:
+```bash
+npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Build for Production
+Generate a production-ready build:
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Preview Production Build
+Preview the production build:
+```bash
+npm run preview
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+```
+src/
+├── components/         # Shared components (Footer, Navbar, Sidebar, etc.)
+├── contexts/           # React Context for global state management
+├── pages/              # Page-level components (Login, Dashboard, etc.)
+├── routes/             # Routing configurations
+├── services/           # API integration and utility functions
+├── mocks/              # Mock API handlers for testing
+├── App.tsx             # Main application component
+├── main.tsx            # Application entry point
+└── vite-env.d.ts       # TypeScript environment types
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+### Frontend
+- **React**: Component-based UI library.
+- **TypeScript**: Static typing for JavaScript.
+- **TailwindCSS**: Utility-first CSS framework.
+- **Material-UI**: Pre-built React components for UI design.
+- **Swiper**: Interactive carousels and sliders.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Charts
+- **Chart.js**: Visualization library for interactive charts.
+- **Recharts**: Chart library built on React.
 
-### Analyzing the Bundle Size
+### State and Routing
+- **React Router DOM**: Client-side routing.
+- **React Context**: Global state management.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Backend Integration
+- **Firebase**: Authentication and backend as a service.
+- **Axios**: HTTP client for API communication.
 
-### Making a Progressive Web App
+### Testing
+- **MSW**: Mock Service Worker for API simulation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Command          | Description                     |
+|------------------|---------------------------------|
+| `npm run dev`    | Run the development server      |
+| `npm run build`  | Build the project for production|
+| `npm run preview`| Preview the production build    |
+| `npm run lint`   | Lint the project for code quality|
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+Feel free to fork the repository and submit pull requests. Contributions are welcome!
 
-test
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed under the MIT License.
