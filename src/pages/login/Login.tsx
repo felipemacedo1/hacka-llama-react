@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Login.css";
 import logoexplora from "../../imgs/logoexplora.png";
@@ -10,16 +10,24 @@ function Login() {
   const { logarComGoogle, loading, error } = useAuth();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const navigate = useNavigate(); // Hook para redirecionamento
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Login com email/senha não implementado.");
+    try {
+      // Lógica de login com email e senha
+      console.log("Login com email/senha não implementado.");
+      navigate("/home"); 
+    } catch (err) {
+      console.error("Erro ao fazer login:", err);
+    }
   };
 
   const handleGoogleLogin = async () => {
     try {
       await logarComGoogle();
       console.log("Login com Google bem-sucedido!");
+      navigate("/home"); 
     } catch (err) {
       console.error("Erro ao fazer login com Google:", err);
     }
