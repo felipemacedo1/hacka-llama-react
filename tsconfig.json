@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "Folder/hacka-llama-react/src/application/routes", "Folder/hacka-llama-react/src/application/services", "Folder/hacka-llama-react/src/utils/CarouselData.tsx", "Folder/hacka-llama-react/src/utils/mocks", "Folder/hacka-llama-react/src/App.tsx", "Folder/hacka-llama-react/src/main.tsx", "Folder/hacka-llama-react/src/vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
