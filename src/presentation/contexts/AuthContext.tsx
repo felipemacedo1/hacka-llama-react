@@ -5,7 +5,7 @@ import {
   signOut,
   User,
 } from 'firebase/auth';
-import { auth } from '../services/firebaseConfig';
+import { auth } from '../../application/services/firebase/firebaseConfig';
 
 interface UserInfo {
   name: string;

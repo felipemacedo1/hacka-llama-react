@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import './Login.css';
-import logoexplora from '../../imgs/logoexplora.png';
+import logoexplora from '../../../assets/img/logos/logoexplora.png';
 import ChatDemo from '../../components/chatlayout/ChatDemo';
 import { useAuth } from '../../contexts/AuthContext';
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Sidebar from '../../components/lsidebar/LeftSideBar';
-import PageContent from './PageContent';
+import QuestionList from '../../components/questions/QuestionList'; // Importa a lista de questões
 import { Export, List, Printer, X } from '@phosphor-icons/react'; // Ícones para abrir/fechar
 
 function Home() {
@@ -66,7 +66,9 @@ function Home() {
         </div>
 
         {/* Conteúdo principal */}
-        <PageContent />
+        <div className="space-y-6">
+          <QuestionList /> {/* Renderiza a lista de questões */}
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
-import logoexplora from '../../imgs/logoexplora.png';
+import logoexplora from '../../../assets/img/logos/logoexplora.png';
+
 
 const Footer: React.FC = () => (
   <div className="w-full  bg-[#010101] text-white p-4">

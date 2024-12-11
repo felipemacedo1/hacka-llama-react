@@ -1,9 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
-import Footer from './components/footer/Footer';
+
+
 import { RoutesConfig } from './application/routes/RoutesConfig';
-import NavBar from './components/navbar/NavBar';
-import LoadingSpinner from './components/spinner/LoadingSpinner';
+import LoadingSpinner from './presentation/components/common/LoadingSpinner';
+import { AuthProvider, useAuth } from './presentation/contexts/AuthContext';
+import NavBar from './presentation/components/navbar/NavBar';
+import Footer from './presentation/components/footer/Footer';
+
 
 function AppContent() {
   const { usuario, loading } = useAuth();
