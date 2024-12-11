@@ -1,0 +1,49 @@
+/* Atualize a classe para focar no container */
+.gradientLlama-container {
+  background: rgba(0, 0, 0, 0.479);
+  background-color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.075) 7%,
+    rgba(0, 0, 0, 0.68) 20%,
+    rgba(0, 0, 0, 0.68) 71%
+  );
+  padding: 1rem; /* Ajustes opcionais */
+}
+.gradientLlama-header {
+  background: rgba(0, 0, 0, 0.68);
+  background-color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.68) 7%,
+    rgba(0, 0, 0, 0.68) 20%,
+    rgba(0, 0, 0, 0.68) 71%
+  );
+  opacity: 0.9;
+}
+
+/* demo.css */
+.chat-demo {
+  background-color: #1a202c; /* Exemplo de cor de fundo */
+}
+
+.chat-demo .message {
+  border-radius: 8px;
+}
+
+.solid-balloon {
+  opacity: 1000 !important; /* Força opacidade sólida */
+  background-color: inherit; /* Mantém a cor de fundo aplicada pela classe */
+}
+
+.balloon {
+  opacity: 10000 !important; /* Garante opacidade sólida */
+  background-color: inherit; /* Respeita a cor de fundo definida */
+  background: black;
+  position: relative; /* Garante posicionamento correto de elementos internos */
+}
+
+/* Opcional: para evitar interferência de outros estilos */
+.balloon > * {
+  opacity: 1 !important;
+  background-color: inherit; /* Respeita a cor de fundo definida */
+  background: black;
+}

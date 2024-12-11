@@ -1,0 +1,18 @@
+.fundoLogin {
+  background-image: url(https://i.imgur.com/Gjeg4Zq.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+}
+
+.gradientLogin {
+  background: rgba(0, 0, 0, 0.68);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.68) 7%,
+    rgba(0, 0, 0, 0.68) 20%,
+    rgba(0, 0, 0, 0.68) 71%
+  );
+  opacity: 0.9;
+}
