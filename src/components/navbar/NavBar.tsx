@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import { Bell, User, List, X } from "@phosphor-icons/react";
-import { useState, useRef, useEffect } from "react";
-import Sidebar from "../sidebar/Sidebar";
-import SubNavBar from "./Header";
-import DropdownMenu from "./DropdownMenu";
-import { useAuth } from "../../contexts/AuthContext";
+import { Link } from 'react-router-dom';
+import { Bell, User, List, X } from '@phosphor-icons/react';
+import { useState, useRef, useEffect } from 'react';
+import Sidebar from '../sidebar/Sidebar';
+import SubNavBar from './Header';
+import DropdownMenu from './DropdownMenu';
+import { useAuth } from '../../contexts/AuthContext';
 
 function NavBar() {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -24,9 +24,9 @@ function NavBar() {
     setIsLoggingOut(true);
     try {
       await deslogar();
-      window.location.href = "/login";
+      window.location.href = '/login';
     } catch (error) {
-      console.error("Erro ao deslogar:", error);
+      console.error('Erro ao deslogar:', error);
     } finally {
       setIsLoggingOut(false);
     }
@@ -39,9 +39,9 @@ function NavBar() {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -55,13 +55,22 @@ function NavBar() {
 
           {/* Links de Navegação */}
           <div className="hidden lg:flex gap-4 cursor-pointer items-end">
-            <Link to="/home" className="hover:underline text-[14px] font-bold px-3 rounded-lg">
+            <Link
+              to="/home"
+              className="hover:underline text-[14px] font-bold px-3 rounded-lg"
+            >
               Disciplinas
             </Link>
-            <Link to="/home" className="hover:underline text-[14px] font-bold px-3 rounded-lg">
+            <Link
+              to="/home"
+              className="hover:underline text-[14px] font-bold px-3 rounded-lg"
+            >
               Notas e Feedbacks
             </Link>
-            <Link to="/dashboard" className="hover:underline text-[14px] font-bold px-3 rounded-lg">
+            <Link
+              to="/dashboard"
+              className="hover:underline text-[14px] font-bold px-3 rounded-lg"
+            >
               Dashboard
             </Link>
             <Link
@@ -74,12 +83,19 @@ function NavBar() {
 
           {/* Ícones de Notificações e Perfil */}
           <div className="flex gap-4 cursor-pointer mr-10 relative">
-            <button className="flex items-end" onClick={toggleDropdown} style={{ marginBottom: "-0.5px" }}>
+            <button
+              className="flex items-end"
+              onClick={toggleDropdown}
+              style={{ marginBottom: '-0.5px' }}
+            >
               <Bell color="gold" size={32} />
             </button>
 
             {dropdownOpen && (
-              <div ref={dropdownRef} className="absolute right-0 mt-6 w-48 z-20">
+              <div
+                ref={dropdownRef}
+                className="absolute right-0 mt-6 w-48 z-20"
+              >
                 <DropdownMenu toggleDropdown={toggleDropdown} />
               </div>
             )}
@@ -91,10 +107,15 @@ function NavBar() {
               >
                 <List size={32} />
               </button>
-              <button className="hidden lg:flex gap-2 cursor-pointer" onClick={toggleSidebar}>
+              <button
+                className="hidden lg:flex gap-2 cursor-pointer"
+                onClick={toggleSidebar}
+              >
                 <div className="flex gap-1">
-                  <span className="hover:underline text-center rounded-full text-black bg-yellow-500 
-                    p-1 hover:bg-yellow-400">
+                  <span
+                    className="hover:underline text-center rounded-full text-black bg-yellow-500 
+                    p-1 hover:bg-yellow-400"
+                  >
                     <User size={22} />
                   </span>
                 </div>
@@ -119,11 +140,13 @@ function NavBar() {
             <button
               onClick={handleLogout}
               className={`w-full ${
-                isLoggingOut ? "bg-gray-400 cursor-not-allowed" : "text-red-500 hover:bg-gray-700"
+                isLoggingOut
+                  ? 'bg-gray-400 cursor-not-allowed'
+                  : 'text-red-500 hover:bg-gray-700'
               } p-2 rounded-md`}
               disabled={isLoggingOut}
             >
-              {isLoggingOut ? "Saindo..." : "Sair"}
+              {isLoggingOut ? 'Saindo...' : 'Sair'}
             </button>
           </div>
         </div>

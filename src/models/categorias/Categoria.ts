@@ -1,4 +1,4 @@
-export default interface Categoria {
-    id: number;
-    tipo: string;
-}
+// export default interface Categoria {
+//     id: number;
+//     tipo: string;
+// }

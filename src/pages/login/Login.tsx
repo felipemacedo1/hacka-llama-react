@@ -1,35 +1,35 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-import "./Login.css";
-import logoexplora from "../../imgs/logoexplora.png";
-import ChatDemo from "../../components/chatlayout/ChatDemo";
-import { useAuth } from "../../contexts/AuthContext";
+import './Login.css';
+import logoexplora from '../../imgs/logoexplora.png';
+import ChatDemo from '../../components/chatlayout/ChatDemo';
+import { useAuth } from '../../contexts/AuthContext';
 
 function Login() {
   const { logarComGoogle, loading, error } = useAuth();
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
   const navigate = useNavigate(); // Hook para redirecionamento
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       // Lógica de login com email e senha
-      console.log("Login com email/senha não implementado.");
-      navigate("/home"); 
+      console.log('Login com email/senha não implementado.');
+      navigate('/home');
     } catch (err) {
-      console.error("Erro ao fazer login:", err);
+      console.error('Erro ao fazer login:', err);
     }
   };
 
   const handleGoogleLogin = async () => {
     try {
       await logarComGoogle();
-      console.log("Login com Google bem-sucedido!");
-      navigate("/home"); 
+      console.log('Login com Google bem-sucedido!');
+      navigate('/home');
     } catch (err) {
-      console.error("Erro ao fazer login com Google:", err);
+      console.error('Erro ao fazer login com Google:', err);
     }
   };
 
@@ -45,7 +45,7 @@ function Login() {
             <img
               src={logoexplora}
               className="w-20 flex-end"
-              style={{ marginBottom: "-40px" }}
+              style={{ marginBottom: '-40px' }}
               alt="Logo Explora"
             />
           </span>
@@ -86,11 +86,11 @@ function Login() {
         <button
           type="submit"
           className={`rounded bg-blue-600 hover:bg-blue-600/90 text-white w-full py-1 flex justify-center ${
-            loading ? "opacity-50 cursor-not-allowed" : ""
+            loading ? 'opacity-50 cursor-not-allowed' : ''
           }`}
           disabled={loading}
         >
-          {loading ? "Carregando..." : "Entrar"}
+          {loading ? 'Carregando...' : 'Entrar'}
         </button>
 
         {/* Botão de Login com Google */}
@@ -98,12 +98,12 @@ function Login() {
           onClick={handleGoogleLogin}
           type="button"
           className={`mt-4 flex items-center justify-center gap-2 w-full py-2 bg-dark-60 text-black border border-gray-300 hover:bg-gray-100 rounded ${
-            loading ? "opacity-50 cursor-not-allowed" : ""
+            loading ? 'opacity-50 cursor-not-allowed' : ''
           }`}
           disabled={loading}
         >
           {loading ? (
-            "Carregando..."
+            'Carregando...'
           ) : (
             <>
               <img
@@ -118,7 +118,7 @@ function Login() {
 
         <hr className="border-blue-600/20 w-full" />
         <p className="text-dark-60/80 text-[12px] mb-1">
-          Não tem uma conta?{" "}
+          Não tem uma conta?{' '}
           <Link to="/#" className="text-blue-600 hover:underline">
             Cadastre-se
           </Link>

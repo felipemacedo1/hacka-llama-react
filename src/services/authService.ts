@@ -1,16 +1,15 @@
-import axios from "axios";
-import { getToken } from "./authUtils";
-
+import axios from 'axios';
+import { getToken } from './authUtils';
 
 const api = axios.create({
-  baseURL: "https://sua-api-base-url.com", // Atualize com sua base URL
+  baseURL: 'https://sua-api-base-url.com', // Atualize com sua base URL
 });
 
 // Login com email e senha
 export const login = async (email: string, senha: string) => {
   try {
-    const resposta = await api.post("/auth/login", { email, senha });
-    return resposta.data; 
+    const resposta = await api.post('/auth/login', { email, senha });
+    return resposta.data;
   } catch (error) {
     throw error;
   }
@@ -27,7 +26,7 @@ api.interceptors.request.use((config) => {
 // Login com Google
 export const loginComGoogle = async (token: string) => {
   try {
-    const resposta = await api.post("/auth/google", { token });
+    const resposta = await api.post('/auth/google', { token });
     return resposta.data;
   } catch (error) {
     throw error;
@@ -37,7 +36,7 @@ export const loginComGoogle = async (token: string) => {
 // Registro de novo usuário
 export const registrar = async (dados: any) => {
   try {
-    const resposta = await api.post("/auth/registrar", dados);
+    const resposta = await api.post('/auth/registrar', dados);
     return resposta.data;
   } catch (error) {
     throw error;
@@ -47,7 +46,7 @@ export const registrar = async (dados: any) => {
 // Logout
 export const logout = async () => {
   try {
-    await api.post("/auth/logout");
+    await api.post('/auth/logout');
   } catch (error) {
     throw error;
   }

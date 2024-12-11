@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const api = axios.create({
   baseURL: 'https://lojagamesy.onrender.com/', // API Base URL
@@ -20,7 +20,11 @@ export const fetchData = async (url: string, setData: Function) => {
  * @param data - Data to be sent
  * @param setData - State setter function
  */
-export const createData = async (url: string, data: Object, setData: Function) => {
+export const createData = async (
+  url: string,
+  data: Object,
+  setData: Function
+) => {
   const response = await api.post(url, data);
   setData(response.data);
 };
@@ -31,7 +35,11 @@ export const createData = async (url: string, data: Object, setData: Function) =
  * @param data - Data to be updated
  * @param setData - State setter function
  */
-export const updateData = async (url: string, data: Object, setData: Function) => {
+export const updateData = async (
+  url: string,
+  data: Object,
+  setData: Function
+) => {
   const response = await api.put(url, data);
   setData(response.data);
 };

@@ -1,6 +1,11 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, signInWithPopup, signOut, User } from "firebase/auth";
-import { auth } from "../services/firebaseConfig";
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+  User,
+} from 'firebase/auth';
+import { auth } from '../services/firebaseConfig';
 
 interface UserInfo {
   name: string;
@@ -19,7 +24,9 @@ interface AuthContextProps {
 
 const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [usuario, setUsuario] = useState<User | null>(null);
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
   const [loading, setLoading] = useState(true);
@@ -33,18 +40,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (user) {
         try {
           const token = await user.getIdToken(true);
-          localStorage.setItem("authToken", token);
+          localStorage.setItem('authToken', token);
           setUsuario(user);
 
           // Fetch user info (if needed)
           const userInfo = await fetchUserInfoFromFirebase(user);
           setUserInfo(userInfo);
         } catch (err) {
-          console.error("Erro ao buscar informações do usuário:", err);
-          setError("Erro ao carregar informações do usuário.");
+          console.error('Erro ao buscar informações do usuário:', err);
+          setError('Erro ao carregar informações do usuário.');
         }
       } else {
-        localStorage.removeItem("authToken");
+        localStorage.removeItem('authToken');
         setUsuario(null);
         setUserInfo(null);
       }
@@ -57,8 +64,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logarComGoogle = async () => {
     const provider = new GoogleAuthProvider();
-    provider.addScope("profile");
-    provider.addScope("email");
+    provider.addScope('profile');
+    provider.addScope('email');
 
     setError(null);
     setLoading(true);
@@ -72,11 +79,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const accessToken = credential?.accessToken;
 
       if (!accessToken) {
-        throw new Error("Token de acesso não encontrado.");
+        throw new Error('Token de acesso não encontrado.');
       }
 
       // Salva o token no localStorage (opcional)
-      localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem('accessToken', accessToken);
 
       setUsuario(user);
 
@@ -84,8 +91,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const userInfo = await fetchUserInfo(accessToken);
       setUserInfo(userInfo);
     } catch (error) {
-      console.error("Erro ao logar com Google:", error);
-      setError("Erro ao autenticar com o Google.");
+      console.error('Erro ao logar com Google:', error);
+      setError('Erro ao autenticar com o Google.');
     } finally {
       setLoading(false);
     }
@@ -95,29 +102,32 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setError(null);
     try {
       await signOut(auth);
-      localStorage.removeItem("authToken");
-      localStorage.removeItem("accessToken");
+      localStorage.removeItem('authToken');
+      localStorage.removeItem('accessToken');
       setUsuario(null);
       setUserInfo(null);
     } catch (error) {
-      console.error("Erro ao deslogar:", error);
-      setError("Erro ao deslogar.");
+      console.error('Erro ao deslogar:', error);
+      setError('Erro ao deslogar.');
     }
   };
 
   const fetchUserInfo = async (token: string): Promise<UserInfo> => {
     try {
-      const response = await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        'https://www.googleapis.com/oauth2/v3/userinfo',
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         if (response.status === 401) {
-          console.error("Token expirado ou inválido.");
+          console.error('Token expirado ou inválido.');
         }
-        throw new Error("Erro ao buscar informações do usuário");
+        throw new Error('Erro ao buscar informações do usuário');
       }
 
       const data = await response.json();
@@ -127,7 +137,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         picture: data.picture,
       };
     } catch (error) {
-      console.error("Erro ao buscar informações do usuário:", error);
+      console.error('Erro ao buscar informações do usuário:', error);
       throw error;
     }
   };
@@ -135,9 +145,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   // Fetch user info from Firebase (fallback)
   const fetchUserInfoFromFirebase = async (user: User): Promise<UserInfo> => {
     return {
-      name: user.displayName || "Usuário",
-      email: user.email || "Email não disponível",
-      picture: user.photoURL || "",
+      name: user.displayName || 'Usuário',
+      email: user.email || 'Email não disponível',
+      picture: user.photoURL || '',
     };
   };
 

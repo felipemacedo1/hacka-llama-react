@@ -3,7 +3,7 @@ import React from 'react';
 
 interface QuestionProps {
   question: string;
-  testQuestion: string
+  testQuestion: string;
   description: string;
   options: string[];
   correctIndex: number;
@@ -24,14 +24,16 @@ const Question: React.FC<QuestionProps> = ({
     <div className="bg-green-100 p-4 rounded-lg shadow-md">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
-      <p> 
-        <span className="text-[10px] font-bold text-gray-700/80">
-        {question}
-        <span> &gt; </span>
-        </span> 
-        <span className='text-[10px] font-bold text-black-700/10'>{testQuestion}</span>
+        <p>
+          <span className="text-[10px] font-bold text-gray-700/80">
+            {question}
+            <span> &gt; </span>
+          </span>
+          <span className="text-[10px] font-bold text-black-700/10">
+            {testQuestion}
+          </span>
         </p>
-        
+
         <div className="flex items-center space-x-2">
           <button
             className="bg-gray-200 p-2 rounded transition duration-300 ease-in-out hover:bg-gray-300"
@@ -71,7 +73,8 @@ const Question: React.FC<QuestionProps> = ({
                     : 'peer-checked:bg-red-500 peer-checked:text-white'
                 } bg-green-100 text-green-800 hover:bg-green-300`}
             >
-              {String.fromCharCode(65 + index)} {/* Converte o índice em letras A, B, C, etc. */}
+              {String.fromCharCode(65 + index)}{' '}
+              {/* Converte o índice em letras A, B, C, etc. */}
             </label>
             <p className="text-gray-700">{option}</p>
           </li>

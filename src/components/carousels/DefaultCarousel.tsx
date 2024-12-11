@@ -46,12 +46,17 @@ const DefaultCarousel: React.FC<CarouselProps> = ({ data }) => {
                 alt={item.alt}
                 className="slide-item w-full rounded-b-xl"
               />
-              
+
               {/* Conteúdo do slide */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-black bg-opacity-50 rounded-b-xl">
-                <h2 className="text-5xl font-bold text-white mb-4">{item.title}</h2>
+                <h2 className="text-5xl font-bold text-white mb-4">
+                  {item.title}
+                </h2>
                 <p className="text-xl text-white mb-6">{item.description}</p>
-                <button className="rounded bg-dark-60 text-dark-10 uppercase py-2 px-4 hover:bg-dark-70" style={{ letterSpacing: '1.5px' }}>
+                <button
+                  className="rounded bg-dark-60 text-dark-10 uppercase py-2 px-4 hover:bg-dark-70"
+                  style={{ letterSpacing: '1.5px' }}
+                >
                   {item.buttonText}
                 </button>
               </div>

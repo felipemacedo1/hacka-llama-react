@@ -61,7 +61,10 @@ const ChatLayout: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col max-w-md mx-auto bg-gray-800 text-white shadow-lg rounded-lg h-[80vh]" style={{ marginTop: '-90px' }}>
+    <div
+      className="flex flex-col max-w-md mx-auto bg-gray-800 text-white shadow-lg rounded-lg h-[80vh]"
+      style={{ marginTop: '-90px' }}
+    >
       {/* Header */}
       <div className="flex items-center justify-between p-4 bg-gray-900 rounded-t-lg">
         <div className="flex items-center space-x-3">

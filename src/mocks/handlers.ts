@@ -45,20 +45,25 @@ export const handlers = [
           nome: 'User Example',
           email: 'user@example.com',
           token: 'mock-token',
-          
         },
         { status: 200 }
       );
     }
 
     return HttpResponse.json<LoginResponseBody>(
-      { id: 0, nome: '', email: '', token: '', message: 'Credenciais inválidas' },
+      {
+        id: 0,
+        nome: '',
+        email: '',
+        token: '',
+        message: 'Credenciais inválidas',
+      },
       { status: 401 }
     );
   }),
 
   http.post<
-    {}, 
+    {},
     GoogleLoginRequestBody,
     GoogleLoginResponseBody,
     '/auth/google'

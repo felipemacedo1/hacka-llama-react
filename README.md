@@ -1,4 +1,3 @@
-
 # Explora+ (Hacka-Llama React)
 
 Explora+ is a React-based application developed during the Hacka-Llama hackathon. It integrates Firebase for authentication and utilizes various React libraries to deliver a seamless, interactive user experience.
@@ -19,12 +18,14 @@ Explora+ is a React-based application developed during the Hacka-Llama hackathon
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/felipemacedo1/hacka-llama-react.git
    cd hacka-llama-react
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -46,19 +47,25 @@ Explora+ is a React-based application developed during the Hacka-Llama hackathon
 ## Usage
 
 ### Development Server
+
 Run the application locally:
+
 ```bash
 npm run dev
 ```
 
 ### Build for Production
+
 Generate a production-ready build:
+
 ```bash
 npm run build
 ```
 
 ### Preview Production Build
+
 Preview the production build:
+
 ```bash
 npm run preview
 ```
@@ -85,6 +92,7 @@ src/
 ## Technologies Used
 
 ### Frontend
+
 - **React**: Component-based UI library.
 - **TypeScript**: Static typing for JavaScript.
 - **TailwindCSS**: Utility-first CSS framework.
@@ -92,30 +100,34 @@ src/
 - **Swiper**: Interactive carousels and sliders.
 
 ### Charts
+
 - **Chart.js**: Visualization library for interactive charts.
 - **Recharts**: Chart library built on React.
 
 ### State and Routing
+
 - **React Router DOM**: Client-side routing.
 - **React Context**: Global state management.
 
 ### Backend Integration
+
 - **Firebase**: Authentication and backend as a service.
 - **Axios**: HTTP client for API communication.
 
 ### Testing
+
 - **MSW**: Mock Service Worker for API simulation.
 
 ---
 
 ## Scripts
 
-| Command          | Description                     |
-|------------------|---------------------------------|
-| `npm run dev`    | Run the development server      |
-| `npm run build`  | Build the project for production|
-| `npm run preview`| Preview the production build    |
-| `npm run lint`   | Lint the project for code quality|
+| Command           | Description                       |
+| ----------------- | --------------------------------- |
+| `npm run dev`     | Run the development server        |
+| `npm run build`   | Build the project for production  |
+| `npm run preview` | Preview the production build      |
+| `npm run lint`    | Lint the project for code quality |
 
 ---
 

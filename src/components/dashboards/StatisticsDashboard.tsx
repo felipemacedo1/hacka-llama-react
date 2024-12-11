@@ -8,7 +8,12 @@ interface StatisticProps {
   bgColor?: string;
 }
 
-const StatisticsDashboard: React.FC<StatisticProps> = ({ title, value, percentual, bgColor }) => {
+const StatisticsDashboard: React.FC<StatisticProps> = ({
+  title,
+  value,
+  percentual,
+  bgColor,
+}) => {
   return (
     <div
       className={`flex flex-col p-4 rounded-lg shadow w-[200px] h-[112px] ${bgColor || 'bg-purple-100'}`}

@@ -1,5 +1,5 @@
-import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from "recharts";
+import React from 'react';
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 
 interface PieChartProps {
   data: { name: string; value: number }[];
@@ -7,7 +7,11 @@ interface PieChartProps {
   title: string;
 }
 
-const PieChartDashboard: React.FC<PieChartProps> = ({ data, colors, title }) => {
+const PieChartDashboard: React.FC<PieChartProps> = ({
+  data,
+  colors,
+  title,
+}) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-6">
       <h3 className="text-lg font-bold mb-4">{title}</h3>
@@ -24,7 +28,10 @@ const PieChartDashboard: React.FC<PieChartProps> = ({ data, colors, title }) => 
             label
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+              <Cell
+                key={`cell-${index}`}
+                fill={colors[index % colors.length]}
+              />
             ))}
           </Pie>
           <Legend />
