@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Question from './Question';
 
 const QuestionList = () => {
@@ -37,11 +37,45 @@ const QuestionList = () => {
     },
   ];
 
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  const goToNextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
+  };
+
+  const goToPreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+    }
+  };
+
   return (
     <div className="space-y-4">
-      {questions.map((q, index) => (
-        <Question key={index} {...q} />
-      ))}
+      {/* Botões de Navegação */}
+      <div className="flex justify-between items-center mb-4">
+        <button
+          className="bg-gray-200 px-4 py-2 rounded shadow hover:bg-gray-300 transition disabled:opacity-50"
+          onClick={goToPreviousQuestion}
+          disabled={currentQuestionIndex === 0}
+        >
+          Anterior
+        </button>
+        <span className="font-bold">
+          Questão {currentQuestionIndex + 1} de {questions.length}
+        </span>
+        <button
+          className="bg-gray-200 px-4 py-2 rounded shadow hover:bg-gray-300 transition disabled:opacity-50"
+          onClick={goToNextQuestion}
+          disabled={currentQuestionIndex === questions.length - 1}
+        >
+          Próxima
+        </button>
+      </div>
+
+      {/* Renderiza a pergunta atual */}
+      <Question {...questions[currentQuestionIndex]} />
     </div>
   );
 };
